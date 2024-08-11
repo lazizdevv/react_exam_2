@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryStatistics } from "./components/category-statistics/category-statistics";
+import { CategoryStatistics } from "./components/category-statistics";
 
 export const Home = () => {
   return (

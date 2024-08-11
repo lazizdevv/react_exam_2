@@ -3,14 +3,14 @@ import { useCategoryList } from "./service/query/useCategoryList";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/button";
 import { CategoryCard } from "./components/category-card";
-import { Search } from "../../components/search/search";
-import Pagination from "../../components/pagination/pagination";
+import { Search } from "../../components/search";
+import {Pagination} from "../../components/pagination";
 
 export const CategotyList = ({ itemsPerPage = 3 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const { data } = useCategoryList(currentPage, itemsPerPage);
 
-  const { category = [], totalCount = 0 } = data || {}; // Fallback uchun bo'sh array va nol qiymatlar
+  const { category = [], totalCount = 0 } = data || {};
 
   const totalPages = Math.ceil(totalCount / itemsPerPage);
 

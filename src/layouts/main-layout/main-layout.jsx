@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Aside } from "../aside/aside";
-import Breadcrumb from "../../components/breadcrumb/bradcrumb";
+import { Aside } from "../aside";
+import { Breadcrumb } from "../../components/breadcrumb";
 import { Button } from "../../ui/button";
 
 export const MainLayout = () => {
@@ -16,7 +16,11 @@ export const MainLayout = () => {
           <header className="w-full shadow-md bg-white  px-10 py-1 lg:py-4 lg:h-20">
             <div className="flex justify-between items-center">
               <Breadcrumb />
-              <Button children={"Выйти"} className="bg-secondary/20 text-secondary h-10 w-28" variant="secondary" />
+              <Button
+                children={"Выйти"}
+                className="bg-secondary/20 text-secondary h-10 w-28"
+                variant="secondary"
+              />
             </div>
           </header>
           <main className="px-5 lg:px-10 h-[587px] mt-10 relative">
@@ -29,10 +33,6 @@ export const MainLayout = () => {
             </div>
           </footer>
         </div>
-
-
-
-        
       </div>
     </>
   );

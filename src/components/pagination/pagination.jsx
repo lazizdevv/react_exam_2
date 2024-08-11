@@ -2,7 +2,7 @@ import React from "react";
 import { LeftIcon } from "../../assets/svg/LeftIcon";
 import { RightIcon } from "../../assets/svg/RightIcon";
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+export const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
     pages.push(i);
@@ -40,5 +40,3 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     </div>
   );
 };
-
-export default Pagination;

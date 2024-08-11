@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ProductCard } from "./components/product-card";
 import { useGetData } from "./service/query/useGetData";
 import { Button } from "../../ui/button";
-import Pagination from "../../components/pagination/pagination";
+import { Pagination } from "../../components/pagination";
 import { Loading } from "../../components/loading";
 
 export const CategoryProduct = () => {
@@ -15,7 +15,7 @@ export const CategoryProduct = () => {
   useEffect(() => {
     const updateItemsPerPage = () => {
       const width = window.innerWidth;
-       if (width < 1024) {
+      if (width < 1024) {
         setItemsPerPage(4);
       } else {
         setItemsPerPage(6);
@@ -30,7 +30,7 @@ export const CategoryProduct = () => {
 
   const { data, isLoading } = useGetData(id, currentPage, itemsPerPage);
 
-  if (isLoading) return <Loading/>;
+  if (isLoading) return <Loading />;
 
   const totalPages = Math.ceil(data.totalCount / itemsPerPage);
 

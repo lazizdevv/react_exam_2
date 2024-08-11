@@ -3,7 +3,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { Loading } from "../../../../components/loading";
 import { useCategoryList } from "../../../category-list/service/query/useCategoryList";
 import { useGetData } from "../../../category-product/service/query/useGetData";
-import Pagination from "../../../../components/pagination/pagination";
+import { Pagination } from "../../../../components/pagination";
 
 export const CategoryStatistics = () => {
   const queryClient = useQueryClient();
@@ -49,12 +49,16 @@ export const CategoryStatistics = () => {
               className="flex justify-between gap-5 items-center p-2 border-y rounded-sm text-secondary"
             >
               <div className="flex gap-5 items-center">
-                <img className="w-14 border border-dashed" src={category.img} alt="category-img" />
+                <img
+                  className="w-14 border border-dashed"
+                  src={category.img}
+                  alt="category-img"
+                />
                 <span className="text-lg font-bold">{category.name}</span>
               </div>
               <div className="text-lg flex items-center justify-center gap-2">
                 <h2 className="font-bold text-base">products:</h2>
-                 <p className="font-semibold text-sm">{category.productCount}</p> 
+                <p className="font-semibold text-sm">{category.productCount}</p>
               </div>
             </li>
           ))}

@@ -1,12 +1,12 @@
 import { nanoid } from "nanoid";
 import { Home } from "../pages/home";
-import { CreateProduct } from "../pages/create-product/create-product";
-import { CategotyList } from "../pages/category-list/categoty-list";
-import { CategoryProduct } from "../pages/category-product/category-product";
-import { CreateCategory } from "../pages/create-category/create-category";
-import { EditProduct } from "../pages/edit-product/edit-product";
-import { EditCategory } from "../pages/edit-category/edit-category";
-import { Profile } from "../pages/profile/profile";
+import { CreateProduct } from "../pages/create-product";
+import { CategotyList } from "../pages/category-list";
+import { CategoryProduct } from "../pages/category-product";
+import { CreateCategory } from "../pages/create-category";
+import { EditProduct } from "../pages/edit-product";
+import { EditCategory } from "../pages/edit-category";
+import { Profile } from "../pages/profile";
 
 export const routes = [
   {

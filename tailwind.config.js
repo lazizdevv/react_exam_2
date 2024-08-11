@@ -12,7 +12,7 @@ export default {
       container:{
         center:true,
         screens:{
-          lg:"1464px"
+          lg:"1564px"
         }
       }
     },

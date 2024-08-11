@@ -36,7 +36,7 @@ export const CategoryProduct = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-5 relative pb-12 h-full border-2">
+      <div className="flex flex-col gap-5 relative pb-12 h-full">
         <Link
           to={"/create-product"}
           className="w-1/2 mx-auto absolute bottom-0 left-0"

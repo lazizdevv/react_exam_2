@@ -2,6 +2,7 @@ import React from "react";
 import { Input } from "../../../../ui/input";
 import { Button } from "../../../../ui/button";
 import { useForm } from "react-hook-form";
+import { PlusIcon } from "../../../../assets/svg/PlusIcon";
 
 export const CreateCategoryForm = ({ submit, name, img, id }) => {
   const { handleSubmit, register } = useForm({
@@ -12,7 +13,7 @@ export const CreateCategoryForm = ({ submit, name, img, id }) => {
     <>
       <div className="flex justify-center mt-10">
         <form
-          className="flex flex-col gap-4 lg:gap-10 border max-w-screen-md w-full p-4 lg:py-10 lg:px-10 rounded-lg shadow-lg shadow-primary"
+          className="flex flex-col gap-4 lg:gap-10 border max-w-screen-md w-full p-4 lg:py-10 lg:px-10 rounded-lg shadow-lg shadow-primary bg-white"
           onSubmit={handleSubmit(submit)}
         >
           <Input
@@ -21,7 +22,7 @@ export const CreateCategoryForm = ({ submit, name, img, id }) => {
             }
             register={register}
             name="name"
-            placeholder="Category Name"
+            placeholder="Название категории"
           />
           <Input
             className={
@@ -29,12 +30,13 @@ export const CreateCategoryForm = ({ submit, name, img, id }) => {
             }
             register={register}
             name="img"
-            placeholder="Category Img"
+            placeholder="URL-адрес изображения категории"
           />
           <Button
-            className="w-1/2 font-bold py-3 mx-auto mt-5 hover:shadow-xl shadow-secondary transition-all"
+            className="lg:w-96 font-bold flex items-center justify-center gap-2  mx-auto mt-5 hover:shadow-xl shadow-secondary transition-all"
+            startIcon={<PlusIcon/>}
             type={"submit"}
-            children={"Add Category"}
+            children={"добавить категорию"}
             variant="success"
           />
         </form>

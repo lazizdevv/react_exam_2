@@ -16,7 +16,7 @@ export const EditCategory = () => {
     mutate(value, {
       onSuccess: () => {
         navigate(-1);
-        toast.success("category muvaffaqiyatli o'zgartirildi!");
+        toast.success("категория успешно изменена!");
       },
     });
   };

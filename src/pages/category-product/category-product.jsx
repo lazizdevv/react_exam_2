@@ -5,6 +5,8 @@ import { useGetData } from "./service/query/useGetData";
 import { Button } from "../../ui/button";
 import { Pagination } from "../../components/pagination";
 import { Loading } from "../../components/loading";
+import { Empty } from "../../components/empty/empty";
+import { PlusIcon } from "../../assets/svg/PlusIcon";
 
 export const CategoryProduct = () => {
   const { id } = useParams();
@@ -42,24 +44,35 @@ export const CategoryProduct = () => {
           className="w-1/2 mx-auto absolute bottom-0 left-0"
         >
           <Button
-            children={"Create Product"}
+            startIcon={<PlusIcon />}
+            children={"Новый товар"}
             variant="success"
-            className="flex items-center justify-center w-40 h-10"
+            className="flex items-center gap-2  w-40 h-10"
           />
         </Link>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 items-center justify-center pb-20 h-full">
-          {data?.products.map((item) => (
-            <ProductCard key={item.id} {...item} />
-          ))}
-        </div>
+        {data?.products.length > 0 ? (
+          <>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 items-center justify-center pb-20 h-full">
+              {data?.products.map((item) => (
+                <ProductCard key={item.id} {...item} />
+              ))}
+            </div>
 
-        <div className="absolute bottom-5 flex justify-end w-full">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={(page) => setCurrentPage(page)}
-          />
-        </div>
+            <div className="absolute bottom-5 flex justify-end w-full">
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={(page) => setCurrentPage(page)}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="border-2 flex justify-center items-center md:items-start px-2 md:px-6 py-3 lg:py-7 mb-4 md:h-full bg-white rounded-lg shadow-md">
+              <Empty />
+            </div>
+          </>
+        )}
       </div>
     </>
   );

@@ -15,7 +15,7 @@ export const CreateProduct = () => {
     mutate(data, {
       onSuccess: () => {
         navigate(-1);
-        toast.success("product muvaffaqiyatli qo'shildi!");
+        toast.success("товар успешно добавлен!");
       },
     });
   };

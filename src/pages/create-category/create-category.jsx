@@ -22,7 +22,7 @@ export const CreateCategory = () => {
         queryClient.invalidateQueries("category-list")
         queryClient.invalidateQueries("product-list")
         navigate(-1);
-        toast.success("category muvaffaqiyatli qo'shildi!");
+        toast.success("категория успешно добавлена!");
       },
     });
   };

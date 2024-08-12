@@ -16,7 +16,7 @@ export const EditProduct = () => {
     mutate(value, {
       onSuccess: () => {
         navigate(-1);
-        toast.success("product muvaffaqiyatli o'zgartirildi!")
+        toast.success("товар успешно изменен!")
       },
     });
   };

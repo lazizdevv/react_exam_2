@@ -15,11 +15,11 @@ export const Login = () => {
         
         if (res && res.user && res.accessToken) {
           console.log(data);
-          toast.success("Login Muvaffaqiyatli Bajarildi!");
+          toast.success("Вход успешен!");
           saveState("user", { ...res.user, token: res.accessToken });
           navigate("/");
         } else {
-          toast.error("Email yoki Password Xato!");
+          toast.error("Электронная почта или пароль неверны!");
         }
       },
     });

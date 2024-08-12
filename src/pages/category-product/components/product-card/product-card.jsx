@@ -14,7 +14,7 @@ export const ProductCard = ({ id, name, img, price, categoryId }) => {
     mutate(id, {
       onSuccess: () => {
         console.log("product deleted!");
-        toast.success("product muvaffaqiyatli o'chirildi!");
+        toast.success("Товар(ы) был успешно удален");
       },
     });
   };

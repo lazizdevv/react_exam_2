@@ -8,12 +8,12 @@ export const Breadcrumb = () => {
   // Sarlavhalar ro'yxati
   const titles = {
     "create-product": "Новый товар",
-    "create-category": "Create Category",
+    "create-category": "Создать категорию",
     "category-list": "Товары",
-    "category-product": "Category Products",
-    "edit-product": "Edit Product",
-    "edit-category": "Edit Category",
-    profile: "Profile",
+    "category-product": "Категория Продукты",
+    "edit-product": "Редактировать продукт",
+    "edit-category": "Изменить категорию",
+    "profile": "Профиль",
   };
 
   // Hozirgi sahifa sarlavhasini olish

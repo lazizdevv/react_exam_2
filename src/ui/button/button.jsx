@@ -6,6 +6,8 @@ export const Button = ({
   type,
   children,
   className = "",
+  startIcon,
+  endIcon,
   ...rest
 }) => {
   const baseStyle =
@@ -13,7 +15,7 @@ export const Button = ({
 
   const variants = {
     primary: "bg-primary text-white hover:bg-primary/90 focus:ring-primary",
-    secondary: "bg-secondary text-white hover:bg-gray-600 focus:ring-gray-500",
+    secondary: "text-secondary hover:bg-gray-200 focus:ring-gray-400",
     danger: "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
     success: "bg-success text-white hover:bg-success/90 focus:success/90",
     warning: "bg-yellow-500 text-white hover:bg-yellow-600 focus:ring-yellow-500",
@@ -29,7 +31,7 @@ export const Button = ({
       type={type}
       {...rest}
     >
-      {children}
+      {startIcon}{children}{endIcon}
     </button>
   );
 };

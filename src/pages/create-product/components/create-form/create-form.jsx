@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "../../../../ui/input";
 import { Button } from "../../../../ui/button";
+import { PlusIcon } from "../../../../assets/svg/PlusIcon";
 
 export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => {
   const { handleSubmit, register } = useForm({
@@ -14,7 +15,7 @@ export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => 
     <>
       <div className="flex justify-center mt-10">
         <form
-          className="flex flex-col gap-5 lg:gap-10 border max-w-screen-md w-full py-5 px-5 lg:py-10 lg:px-10 rounded-lg shadow-lg shadow-primary"
+          className="flex flex-col gap-5 lg:gap-10 border bg-white max-w-screen-md w-full py-5 px-5 lg:py-10 lg:px-10 rounded-lg shadow-lg shadow-primary"
           onSubmit={handleSubmit(submit)}
         >
           <select
@@ -35,7 +36,7 @@ export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => 
           <Input
             register={register}
             name="name"
-            placeholder="Product Name"
+            placeholder="название продукта"
             className={
               "border font-bold text-base border-primary focus:border-blue-700 focus:shadow-lg focus:shadow-primary"
             }
@@ -45,7 +46,7 @@ export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => 
             register={register}
             name="price"
             type="number"
-            placeholder="Product Price"
+            placeholder="цена продукта"
             className={
               "border font-bold text-base border-primary focus:border-blue-700 focus:shadow-lg focus:shadow-primary"
             }
@@ -53,9 +54,9 @@ export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => 
 
           <Input
             register={register}
-            name="img"
+            name="product-img"
             type="text"
-            placeholder="Product Image"
+            placeholder="URL изображения продукта"
             className={
               "border font-bold text-base border-primary focus:border-blue-700 focus:shadow-lg focus:shadow-primary"
             }
@@ -63,9 +64,10 @@ export const CreateForm = ({ submit,categeory, categeoryId,name,price,img }) => 
 
           <Button
             type={"submit"}
-            children={"Add Product"}
+            startIcon={<PlusIcon/>}
+            children={"добавить продукт"}
             variant="success"
-            className="w-1/2 font-bold py-3 mx-auto mt-5"
+            className="lg:w-96 w-64 h-10 font-bold  mx-auto mt-5 flex items-center justify-center gap-2"
           />
         </form>
       </div>

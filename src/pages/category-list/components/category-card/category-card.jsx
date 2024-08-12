@@ -13,7 +13,7 @@ export const CategoryCard = ({ id, name, img }) => {
   const deleteCategory = () => {
     mutate(id, {
       onSuccess: () => {
-        toast.success("category muvaffaqiyatli o'chirildi!");
+        toast.success("категория успешно удалена!");
       },
     });
   };
@@ -26,9 +26,9 @@ export const CategoryCard = ({ id, name, img }) => {
 
       <div className="flex items-center gap-5">
         <Button
-          children={"View Products"}
+          children={"просмотреть продукты"}
           onClick={() => navigate(`/category-product/${id}`)}
-          className="text-sm"
+          className="text-sm h-10 w-48"
         />
 
         <Button

@@ -18,7 +18,7 @@ export const Search = () => {
           <input
             className="w-64 rounded-lg h-10 focus:outline-primary pl-14 bg-[#F7F7FF] text-base font-bold"
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Search"
+            placeholder="Поиск"
           />
         </div>
         {inputValue.length >= 3 && (

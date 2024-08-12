@@ -11,7 +11,7 @@ export const LoginCard = ({ submit }) => {
         <div className="flex justify-center items-center h-screen">
           <form
             onSubmit={handleSubmit(submit)}
-            className="flex flex-col gap-5 max-w-screen-sm w-full mx-5 p-5 lg:p-12 border rounded-lg shadow-lg shadow-primary"
+            className="flex flex-col gap-5 max-w-screen-sm w-full mx-5 p-5 lg:p-12 border rounded-lg shadow-lg shadow-primary bg-white"
           >
             <div className="">
               <Input

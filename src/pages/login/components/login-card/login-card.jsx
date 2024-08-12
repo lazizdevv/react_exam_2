@@ -16,7 +16,7 @@ export const LoginCard = ({ submit }) => {
 
   return (
     <>
-      <div className="">
+      <div className="container">
         <div className="flex justify-center items-center h-screen">
           <form
             onSubmit={handleSubmit(submit)}
@@ -25,7 +25,7 @@ export const LoginCard = ({ submit }) => {
             <div className="pb-7 relative">
               <Input
                 className={
-                  "py-3 border-2 border-primary font-bold text-lg text-secondary"
+                  "md:py-2 border-2 border-primary font-bold text-lg text-secondary"
                 }
                 placeholder="Email"
                 register={register}
@@ -40,7 +40,7 @@ export const LoginCard = ({ submit }) => {
             <div className="pb-7 relative">
               <Input
                 className={
-                  "py-3 border-2 border-primary font-bold text-lg text-secondary"
+                  "md:py-2 border-2 border-primary font-bold text-lg text-secondary"
                 }
                 type="password"
                 placeholder="Password"
@@ -54,11 +54,11 @@ export const LoginCard = ({ submit }) => {
               )}
             </div>
 
-            <div className="flex justify-center my-5">
+            <div className="flex justify-center mt-2">
               <Button
                 type={"submit"}
                 children={"Login"}
-                className="w-1/2 py-3 hover:shadow-md hover:shadow-primary transition-all"
+                className="w-96 py-3 hover:shadow-md hover:shadow-primary transition-all"
               />
             </div>
           </form>

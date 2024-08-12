@@ -7,6 +7,7 @@ import { CreateCategory } from "../pages/create-category";
 import { EditProduct } from "../pages/edit-product";
 import { EditCategory } from "../pages/edit-category";
 import { Profile } from "../pages/profile";
+import { EditProfile } from "../pages/edit-profile";
 
 export const routes = [
   {
@@ -47,5 +48,10 @@ export const routes = [
     component: Profile,
     id: nanoid(),
     path: "profile",
+  },
+  {
+    component: EditProfile,
+    id: nanoid(),
+    path: "edit-profile/:id",
   },
 ];

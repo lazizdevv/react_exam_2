@@ -14,7 +14,7 @@ export const Aside = () => {
   ];
   return (
     <>
-      <div className="lg:h-screen flex justify-center items-start py-5 lg:py-[30px] w-full lg:w-[90px]">
+      <div className="lg:h-screen flex justify-center items-start py-5 lg:py-8 w-full lg:w-24">
         <div className="flex lg:flex-col justify-center gap-4 lg:gap-5 font-bold text-white text-sm ">
           {links.map(({ to, label }) => (
             <div key={to}>

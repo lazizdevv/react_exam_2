@@ -1,4 +1,3 @@
-import React from "react";
 import { Input } from "../../../../ui/input";
 import { Button } from "../../../../ui/button";
 import { useForm } from "react-hook-form";
@@ -33,7 +32,9 @@ export const CreateCategoryForm = ({ submit, name, img, id }) => {
               placeholder="Название категории"
             />
             {errors.name && (
-              <p className="text-red-600 text-sm absolute bottom-0 font-bold">{errors.name.message}</p>
+              <p className="text-red-600 text-sm absolute bottom-0 font-bold">
+                {errors.name.message}
+              </p>
             )}
           </div>
 
@@ -47,7 +48,9 @@ export const CreateCategoryForm = ({ submit, name, img, id }) => {
               placeholder="URL-адрес изображения категории"
             />
             {errors.img && (
-              <p className="text-red-600 text-sm absolute bottom-0 font-bold">{errors.img.message}</p>
+              <p className="text-red-600 text-sm absolute bottom-0 font-bold">
+                {errors.img.message}
+              </p>
             )}
           </div>
           <Button

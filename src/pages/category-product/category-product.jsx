@@ -10,13 +10,14 @@ import { PlusIcon } from "../../assets/svg/PlusIcon";
 
 export const CategoryProduct = () => {
   const { id } = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
 
+  const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
       const width = window.innerWidth;
+      
       if (width < 1024) {
         setItemsPerPage(4);
       } else {

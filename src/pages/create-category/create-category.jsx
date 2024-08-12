@@ -1,4 +1,3 @@
-import React from "react";
 import { CreateCategoryForm } from "./components/create-category-form";
 import { useCreateCategory } from "../category-list/service/mutation/useCreateCategory";
 import { useNavigate } from "react-router-dom";
@@ -12,27 +11,19 @@ export const CreateCategory = () => {
   const navigate = useNavigate();
   const { data, isLoading } = useCategoryList();
   const queryClient = useQueryClient();
-  console.log(data);
-  
-
 
   const submit = (data) => {
     mutate(data, {
       onSuccess: () => {
-        queryClient.invalidateQueries("category-list")
-        queryClient.invalidateQueries("product-list")
+        queryClient.invalidateQueries("category-list");
+        queryClient.invalidateQueries("product-list");
         navigate(-1);
         toast.success("категория успешно добавлена!");
       },
     });
   };
+
   return (
-    <>
-      {isLoading ? (
-        <Loading/>
-      ) : (
-        <CreateCategoryForm submit={submit} />
-      )}
-    </>
+    <>{isLoading ? <Loading /> : <CreateCategoryForm submit={submit} />}</>
   );
 };

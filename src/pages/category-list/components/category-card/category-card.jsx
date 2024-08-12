@@ -20,7 +20,7 @@ export const CategoryCard = ({ id, name, img }) => {
   return (
     <div className="flex items-center justify-between gap-10 flex-wrap p-4 border-y">
       <div className="flex items-center gap-5">
-        <img className="w-[70px] border-2 border-dashed" src={img} alt="img" />
+        <img className="w-20 border border-dashed" src={img} alt="img" />
         <h2 className="text-center font-bold text-lg">{name}</h2>
       </div>
 

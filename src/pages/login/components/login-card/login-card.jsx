@@ -13,6 +13,7 @@ export const LoginCard = ({ submit }) => {
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
+
   return (
     <>
       <div className="">
@@ -30,7 +31,11 @@ export const LoginCard = ({ submit }) => {
                 register={register}
                 name="email"
               />
-              {errors.email && <p className="text-red-600 text-sm absolute bottom-0 transition-all font-bold">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="text-red-600 text-sm absolute bottom-0 transition-all font-bold">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
             <div className="pb-7 relative">
               <Input
@@ -42,7 +47,11 @@ export const LoginCard = ({ submit }) => {
                 register={register}
                 name="password"
               />
-              {errors.password && <p className="text-red-600 text-sm absolute bottom-0 transition-all font-bold">{errors.password.message}</p>}
+              {errors.password && (
+                <p className="text-red-600 text-sm absolute bottom-0 transition-all font-bold">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
 
             <div className="flex justify-center my-5">

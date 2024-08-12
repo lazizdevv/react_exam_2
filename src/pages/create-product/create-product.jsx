@@ -1,4 +1,3 @@
-import React from "react";
 import { CreateForm } from "./components/create-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";

@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "../../../../ui/input";
 import { Button } from "../../../../ui/button";
@@ -15,8 +14,6 @@ export const CreateForm = ({
   const { handleSubmit, register } = useForm({
     defaultValues: { name, price, img, categeoryId, categeory },
   });
-
-  console.log(categeory);
 
   return (
     <>

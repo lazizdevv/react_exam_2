@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export function useDebounce(value, delay = 500) {
   const [debouncedValue, setDebouncedValue] = React.useState(value);
@@ -8,7 +8,6 @@ export function useDebounce(value, delay = 500) {
       setDebouncedValue(value);
     }, delay);
 
-    // Cancel the timeout if value changes (also on delay change or unmount)
     return () => {
       clearTimeout(handler);
     };
@@ -16,5 +15,3 @@ export function useDebounce(value, delay = 500) {
 
   return debouncedValue;
 }
-//======================================================= use
-// const defferedInputValue = useDebounce(inputValue, 600);

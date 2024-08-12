@@ -16,13 +16,13 @@ export const Search = () => {
             <SearchIcon />
           </div>
           <input
-            className="w-64 rounded-lg h-10 focus:outline-primary pl-14 bg-[#F7F7FF] text-base font-bold"
+            className="w-64 rounded-lg h-10 focus:outline-primary pl-14 bg-special text-base font-bold"
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Поиск"
           />
         </div>
         {inputValue.length >= 3 && (
-          <div className="absolute right-0 z-20 p-5 w-[800px] border-2 rounded-lg bg-gray-100 max-w-screen-md">
+          <div className="absolute right-0 z-20 p-3 md:p-5 lg:w-[800px] border rounded-lg shadow-md shadow-primary bg-special max-w-screen-md">
             {data?.map((item) => (
               <CategoryCard key={item.id} {...item} />
             ))}

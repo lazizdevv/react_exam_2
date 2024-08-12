@@ -15,7 +15,7 @@ export const useGetData = (id, page = 1, limit = 100) => {
         })
         .then((res) => ({
           products: res.data,
-          totalCount: parseInt(res.headers['x-total-count'], 10),
+          totalCount: parseInt(res.headers["x-total-count"], 10),
         })),
     keepPreviousData: true,
   });

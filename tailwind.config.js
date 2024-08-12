@@ -7,7 +7,7 @@ export default {
         primary:"#5B5CE2",
         secondary:"#212121",
         special:"#F7F7FF",
-        success:"#1BC58D"
+        success:"#1BC58D",
       },
       container:{
         center:true,

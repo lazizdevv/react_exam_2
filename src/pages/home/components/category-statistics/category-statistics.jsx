@@ -6,13 +6,6 @@ import { useGetData } from "../../../category-product/service/query/useGetData";
 import { Pagination } from "../../../../components/pagination";
 
 export const CategoryStatistics = () => {
-  const itemsPerPage = 5;
-  const [currentPage, setCurrentPage] = useState(1);
-  const { data: categories, isLoading: isCategoriesLoading } = useCategoryList(
-    currentPage,
-    itemsPerPage
-  );
-
   const queryClient = useQueryClient();
 
   const { data: products, isLoading: isProductsLoading } = useGetData({
@@ -21,6 +14,13 @@ export const CategoryStatistics = () => {
       queryClient.invalidateQueries("product-list");
     },
   });
+
+  const itemsPerPage = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const { data: categories, isLoading: isCategoriesLoading } = useCategoryList(
+    currentPage,
+    itemsPerPage
+  );
 
   if (isCategoriesLoading || isProductsLoading) return <Loading />;
   const totalPages = Math.ceil(categories.totalCount / itemsPerPage);
@@ -38,7 +38,7 @@ export const CategoryStatistics = () => {
   return (
     <div className="relative h-full">
       <div className="p-3 lg:p-6 bg-white shadow-lg shadow-primary rounded-lg">
-        <h2 className="text-xl font-bold text-gray-700 mb-6 border-b-2 pb-2">
+        <h2 className="text-xl font-bold text-secondary mb-6 border-b-2 pb-2">
           Статистика категорий и продуктов
         </h2>
         <ul className="">

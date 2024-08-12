@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEditCategory } from "../category-list/service/mutation/useEditCategory";
 import { toast } from "react-toastify";
@@ -23,7 +22,7 @@ export const EditCategory = () => {
   return (
     <>
       {isLoading ? (
-        <Loading/>
+        <Loading />
       ) : (
         <CreateCategoryForm submit={submit} {...data} />
       )}

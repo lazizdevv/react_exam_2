@@ -6,24 +6,23 @@ import { toast } from "react-toastify";
 import { DeleteIcon } from "../../../../assets/svg/DeleteIcon";
 import { EditIcon } from "../../../../assets/svg/EditIcon";
 
-export const ProductCard = ({ id, name, img, price, categoryId }) => {
+export const ProductCard = ({ id, name, img, price }) => {
   const navigate = useNavigate();
   const { mutate } = useDeleteProduct(id);
 
   const deleteProduct = () => {
     mutate(id, {
       onSuccess: () => {
-        console.log("product deleted!");
         toast.success("Товар(ы) был успешно удален");
       },
     });
   };
   return (
     <>
-      <div className="flex items-center justify-center lg:justify-between p-6 shadow-lg rounded-lg border-2 relative h-fit bg-white">
+      <div className="flex items-center justify-center lg:justify-between p-6 shadow-md shadow-primary rounded-lg border-2 relative h-fit bg-white">
         <div className="flex flex-col lg:flex-row gap-5">
           <img
-            className="w-[150px] h-fit border-2 border-dashed"
+            className="w-[150px] h-fit border border-dashed"
             src={img}
             alt="img"
           />

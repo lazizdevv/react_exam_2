@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Loading } from "../../components/loading";
@@ -16,18 +15,12 @@ export const EditProduct = () => {
     mutate(value, {
       onSuccess: () => {
         navigate(-1);
-        toast.success("товар успешно изменен!")
+        toast.success("товар успешно изменен!");
       },
     });
   };
 
   return (
-    <>
-      {isLoading ? (
-        <Loading/>
-      ) : (
-        <CreateForm submit={submit} {...data} />
-      )}
-    </>
+    <>{isLoading ? <Loading /> : <CreateForm submit={submit} {...data} />}</>
   );
 };

@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../../ui/input";
 import { Button } from "../../ui/button";
-import { useAdminProfile } from "../../hooks/admin/useAdminProfile";
-import { useUpdateAdminProfile } from "../../hooks/admin/useUpdateAdminProfile";
+import { useAdminProfile } from "../profile/service/query/useAdminProfile";
+import { useUpdateAdminProfile } from "./service/mutation/useUpdateAdminProfile";
 import { Loading } from "../../components/loading";
 import { profileSchema } from "../../validation/schema/profileSchema";
 

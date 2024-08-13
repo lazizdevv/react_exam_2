@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { request } from "../../config/request"; // API qo'ng'iroqlari uchun custom request util
+import { request } from "../../../../config/request"; // API qo'ng'iroqlari uchun custom request util
 
 export const useAdminProfile = (id) => {
   return useQuery({
